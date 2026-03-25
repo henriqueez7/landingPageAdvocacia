@@ -1,0 +1,51 @@
+@reference "../styles/global.css";
+
+.section {
+  @apply px-4 py-18 sm:px-6 lg:px-10 lg:py-24;
+}
+
+.panel {
+  @apply mx-auto max-w-7xl rounded-[2rem] border border-slate-200 bg-[linear-gradient(180deg,#ffffff,#f8fafc)] p-8 shadow-[0_26px_80px_rgba(15,23,42,0.06)] sm:p-10 lg:p-14;
+}
+
+.grid {
+  @apply grid gap-8 sm:grid-cols-2 xl:grid-cols-4;
+}
+
+.item {
+  @apply space-y-3 border-l border-slate-200 pl-5 first:border-l-0 first:pl-0;
+}
+
+.value {
+  @apply font-display text-4xl text-brand-gold-soft sm:text-5xl;
+}
+
+.label {
+  @apply text-sm uppercase tracking-[0.24em] text-slate-500;
+}
+
+@media (max-width: 639px) {
+  .section {
+    @apply px-4 py-16;
+  }
+
+  .panel {
+    @apply rounded-[1.6rem] p-5;
+  }
+
+  .grid {
+    @apply gap-5;
+  }
+
+  .item {
+    @apply border-l-0 border-t border-slate-200 pl-0 pt-5 first:border-t-0 first:pt-0;
+  }
+
+  .value {
+    @apply text-[2.3rem];
+  }
+
+  .label {
+    @apply text-[0.72rem] tracking-[0.2em];
+  }
+}

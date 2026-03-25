@@ -1,0 +1,91 @@
+@reference "../styles/global.css";
+
+.navbar {
+  @apply fixed inset-x-0 top-0 z-50;
+}
+
+.shell {
+  @apply flex w-full items-center justify-between gap-3 border-b border-slate-200/80 bg-white/92 px-4 py-1.5 shadow-[0_18px_46px_rgba(15,23,42,0.08)] backdrop-blur-xl sm:px-6 lg:px-12 lg:py-2;
+}
+
+.brand {
+  @apply inline-flex h-12 shrink-0 items-center overflow-hidden sm:h-14 lg:h-16;
+}
+
+.brandLogo {
+  @apply block h-[6.5rem] w-auto max-w-none sm:h-[7.25rem] lg:h-[8.25rem];
+  margin: -1.5rem 0 -1.9rem -0.8rem;
+}
+
+.links {
+  @apply hidden items-center gap-7 lg:flex;
+}
+
+.link {
+  @apply relative text-sm text-slate-600 hover:text-brand-navy;
+}
+
+.link::after {
+  content: '';
+  @apply absolute left-0 top-[calc(100%+0.45rem)] h-px w-full origin-left scale-x-0 bg-brand-gold transition-transform duration-300;
+}
+
+.link:hover::after {
+  @apply scale-x-100;
+}
+
+.desktopCtaWrap {
+  @apply hidden lg:block;
+}
+
+.cta,
+.mobileCta {
+  @apply inline-flex items-center justify-center rounded-full border border-brand-gold/30 bg-brand-gold px-5 py-3 text-sm font-semibold text-slate-950 shadow-[0_10px_24px_rgba(194,161,106,0.22)] hover:-translate-y-0.5 hover:bg-brand-gold-soft hover:shadow-[0_16px_30px_rgba(194,161,106,0.28)];
+}
+
+.toggle {
+  @apply inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 text-brand-navy shadow-[0_10px_22px_rgba(15,23,42,0.05)] lg:hidden;
+}
+
+.toggle[aria-expanded='true'] {
+  @apply border-brand-gold/35 bg-brand-gold/10;
+}
+
+.mobilePanel {
+  @apply w-full border-b border-slate-200 bg-white/96 px-4 pb-5 pt-3 shadow-[0_18px_40px_rgba(15,23,42,0.06)] backdrop-blur-xl lg:hidden;
+}
+
+.mobileLinks {
+  @apply flex flex-col gap-4;
+}
+
+.mobileLink {
+  @apply rounded-2xl px-3 py-3 text-sm text-slate-700 transition hover:bg-slate-50 hover:text-brand-navy;
+}
+
+.mobileCta {
+  @apply mt-2;
+}
+
+@media (max-width: 639px) {
+  .shell {
+    @apply min-h-[4.25rem];
+  }
+
+  .brand {
+    @apply h-14;
+  }
+
+  .brandLogo {
+    @apply h-[6.1rem];
+    margin: -1.1rem 0 -1.3rem -0.55rem;
+  }
+
+  .mobilePanel {
+    @apply max-h-[calc(100vh-4.25rem)] overflow-y-auto px-4 pb-6 pt-2;
+  }
+
+  .mobileLinks {
+    @apply gap-2;
+  }
+}

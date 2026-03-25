@@ -1,0 +1,113 @@
+@reference "../styles/global.css";
+
+.section {
+  @apply relative overflow-hidden bg-[linear-gradient(135deg,#12294a_0%,#102443_100%)] px-0 py-18 lg:py-24;
+}
+
+.content {
+  @apply mx-auto max-w-7xl;
+}
+
+.panel {
+  @apply relative overflow-hidden px-4 py-10 sm:px-6 lg:px-10 lg:py-12;
+}
+
+.header {
+  @apply relative z-10 mx-auto flex max-w-4xl flex-col items-center text-center;
+}
+
+.eyebrow {
+  @apply text-xs font-semibold uppercase tracking-[0.32em] text-brand-gold/80;
+}
+
+.eyebrow::after {
+  content: '';
+  @apply mx-auto mt-4 block h-px w-20 bg-brand-gold/80;
+}
+
+.heading {
+  @apply mt-6 font-display text-3xl leading-tight text-white sm:text-4xl lg:text-5xl;
+}
+
+.description {
+  @apply mt-4 max-w-3xl text-base leading-8 text-slate-200 sm:text-lg;
+}
+
+.grid {
+  @apply relative z-10 mt-12 grid gap-5 lg:grid-cols-3;
+}
+
+.card {
+  @apply flex h-full flex-col overflow-hidden rounded-[1.8rem] bg-white/96 shadow-[0_16px_36px_rgba(7,15,29,0.18)];
+}
+
+.visual {
+  @apply relative aspect-[16/10] overflow-hidden bg-[linear-gradient(145deg,rgba(194,161,106,0.14),rgba(15,23,42,0.96))];
+}
+
+.visual::after {
+  content: '';
+  @apply pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-[linear-gradient(180deg,transparent,rgba(8,17,31,0.12))];
+}
+
+.visualImage {
+  @apply h-full w-full object-cover object-center transition duration-500 hover:scale-[1.04];
+}
+
+.body {
+  @apply flex flex-1 flex-col p-7;
+}
+
+.category {
+  @apply text-xs font-semibold uppercase tracking-[0.28em] text-brand-gold/80;
+}
+
+.title {
+  @apply mt-4 font-display text-2xl leading-tight text-brand-navy;
+}
+
+.text {
+  @apply mt-4 flex-1 text-base leading-8 text-slate-600;
+}
+
+.link {
+  @apply mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand-gold-soft transition hover:text-brand-navy;
+}
+
+@media (max-width: 639px) {
+  .section {
+    @apply py-16;
+  }
+
+  .panel {
+    @apply px-4 py-8;
+  }
+
+  .heading {
+    @apply text-[2rem];
+  }
+
+  .description {
+    @apply text-[0.98rem] leading-7;
+  }
+
+  .grid {
+    @apply mt-10 gap-4;
+  }
+
+  .visual {
+    @apply aspect-[16/11];
+  }
+
+  .body {
+    @apply p-4;
+  }
+
+  .text {
+    @apply text-[0.96rem] leading-7;
+  }
+
+  .link {
+    @apply mt-5;
+  }
+}

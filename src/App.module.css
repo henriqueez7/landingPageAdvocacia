@@ -1,0 +1,5 @@
+@reference "./styles/global.css";
+
+.page {
+  @apply relative min-h-screen bg-white text-slate-900;
+}

@@ -1,0 +1,59 @@
+@reference "../styles/global.css";
+
+.section {
+  @apply px-4 py-18 sm:px-6 lg:px-10 lg:py-24;
+}
+
+.container {
+  @apply mx-auto max-w-7xl;
+}
+
+.panel {
+  @apply relative overflow-hidden rounded-[2.2rem] border border-white/10 bg-[linear-gradient(135deg,#0f172a_0%,#090d16_56%,#17110a_100%)] px-8 py-12 shadow-[0_30px_90px_rgba(2,6,23,0.35)] sm:px-12 sm:py-16;
+}
+
+.glow {
+  @apply absolute right-0 top-0 h-64 w-64 rounded-full bg-brand-gold/10 blur-3xl;
+}
+
+.content {
+  @apply relative flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between;
+}
+
+.text {
+  @apply max-w-3xl;
+}
+
+.eyebrow {
+  @apply text-xs font-semibold uppercase tracking-[0.32em] text-brand-gold/80;
+}
+
+.title {
+  @apply mt-5 font-display text-3xl leading-tight text-white sm:text-4xl lg:text-5xl;
+}
+
+.button {
+  @apply inline-flex items-center justify-center rounded-full bg-brand-gold px-6 py-3.5 text-sm font-semibold text-slate-950 transition hover:-translate-y-0.5 hover:bg-brand-gold-soft;
+}
+
+@media (max-width: 639px) {
+  .section {
+    @apply px-4 py-16;
+  }
+
+  .panel {
+    @apply rounded-[1.75rem] px-5 py-7;
+  }
+
+  .content {
+    @apply gap-5;
+  }
+
+  .title {
+    @apply text-[1.95rem];
+  }
+
+  .button {
+    @apply min-h-14 w-full;
+  }
+}

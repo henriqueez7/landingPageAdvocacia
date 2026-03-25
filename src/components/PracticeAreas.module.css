@@ -1,0 +1,59 @@
+@reference "../styles/global.css";
+
+.section {
+  @apply px-4 py-18 sm:px-6 lg:px-10 lg:py-24;
+}
+
+.content {
+  @apply mx-auto max-w-7xl;
+}
+
+.grid {
+  @apply mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3;
+}
+
+.card {
+  @apply h-full rounded-[1.8rem] border border-slate-200/90 bg-white/92 p-7 shadow-[0_16px_36px_rgba(15,23,42,0.05)] transition duration-300 hover:-translate-y-1 hover:border-brand-gold/35 hover:shadow-[0_22px_44px_rgba(15,23,42,0.09)];
+}
+
+.cardTop {
+  @apply flex items-center justify-between gap-4;
+}
+
+.icon {
+  @apply inline-flex rounded-2xl border border-brand-gold/15 bg-brand-gold/10 p-3 text-brand-gold-soft;
+}
+
+.index {
+  @apply text-[0.72rem] font-semibold tracking-[0.32em] text-slate-300;
+}
+
+.title {
+  @apply mt-6 font-display text-2xl text-brand-navy;
+}
+
+.text {
+  @apply mt-4 text-base leading-8 text-slate-600;
+}
+
+@media (max-width: 639px) {
+  .section {
+    @apply px-4 py-16;
+  }
+
+  .grid {
+    @apply mt-10 gap-4;
+  }
+
+  .card {
+    @apply rounded-[1.5rem] p-4;
+  }
+
+  .title {
+    @apply mt-5 text-[1.55rem];
+  }
+
+  .text {
+    @apply mt-3 text-[0.96rem] leading-7;
+  }
+}

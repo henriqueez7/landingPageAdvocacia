@@ -1,0 +1,27 @@
+@reference "../styles/global.css";
+
+.root {
+  @apply max-w-3xl space-y-4;
+}
+
+.center {
+  @apply mx-auto text-center;
+}
+
+.eyebrow {
+  @apply text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-brand-gold/80 sm:text-xs sm:tracking-[0.32em];
+}
+
+.title {
+  @apply font-display text-[2rem] leading-[1.06] text-brand-navy sm:text-4xl lg:text-5xl;
+}
+
+.description {
+  @apply max-w-2xl text-[1rem] leading-7 text-slate-600 sm:text-lg sm:leading-8;
+}
+
+@media (max-width: 639px) {
+  .root {
+    @apply space-y-3;
+  }
+}
