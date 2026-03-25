@@ -21,11 +21,13 @@
 }
 
 .title {
-  @apply font-display text-2xl text-brand-navy;
+  font-family: var(--font-recursive);
+  font-weight: 700;
+  @apply text-2xl text-brand-navy;
 }
 
 .text {
-  @apply mt-3 text-base leading-8 text-slate-600;
+  @apply mt-3 text-base leading-7 text-slate-600;
 }
 
 @media (max-width: 639px) {

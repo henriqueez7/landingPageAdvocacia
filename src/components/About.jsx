@@ -1,7 +1,26 @@
 import Reveal from './Reveal'
 import SectionHeading from './SectionHeading'
+import { Building2, ShieldCheck, UserRound } from 'lucide-react'
 import apresentacaoImage from '../assets/apresentacao.png'
 import styles from './About.module.css'
+
+const pillars = [
+  {
+    title: 'Atendimento',
+    description: 'Consultivo e contencioso com postura institucional e comunicacao clara.',
+    icon: UserRound,
+  },
+  {
+    title: 'Estrutura',
+    description: 'Conducao organizada, com leitura tecnica, acompanhamento e criterio.',
+    icon: Building2,
+  },
+  {
+    title: 'Compromisso',
+    description: 'Defesa qualificada dos interesses do cliente com seriedade e discricao.',
+    icon: ShieldCheck,
+  },
+]
 
 function About() {
   return (
@@ -29,24 +48,21 @@ function About() {
             />
 
             <div className={styles.pillars}>
-              <div className={styles.pillarCard}>
-                <p className={styles.pillarLabel}>Atendimento</p>
-                <p className={styles.pillarText}>
-                  Consultivo e contencioso com postura institucional e comunicacao clara.
-                </p>
-              </div>
-              <div className={styles.pillarCard}>
-                <p className={styles.pillarLabel}>Estrutura</p>
-                <p className={styles.pillarText}>
-                  Conducao organizada, com leitura tecnica, acompanhamento e criterio.
-                </p>
-              </div>
-              <div className={styles.pillarCard}>
-                <p className={styles.pillarLabel}>Compromisso</p>
-                <p className={styles.pillarText}>
-                  Defesa qualificada dos interesses do cliente com seriedade e discricao.
-                </p>
-              </div>
+              {pillars.map((pillar) => {
+                const Icon = pillar.icon
+
+                return (
+                  <div key={pillar.title} className={styles.pillarCard}>
+                    <div className={styles.pillarTop}>
+                      <div className={styles.pillarIcon}>
+                        <Icon size={20} strokeWidth={1.8} />
+                      </div>
+                      <p className={styles.pillarLabel}>{pillar.title}</p>
+                    </div>
+                    <p className={styles.pillarText}>{pillar.description}</p>
+                  </div>
+                )
+              })}
             </div>
           </div>
         </Reveal>

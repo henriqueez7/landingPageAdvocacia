@@ -63,11 +63,13 @@
 }
 
 .title {
-  @apply mt-4 font-display text-2xl leading-tight text-brand-navy;
+  font-family: var(--font-recursive);
+  font-weight: 700;
+  @apply mt-4 text-2xl leading-tight text-brand-navy;
 }
 
 .text {
-  @apply mt-4 flex-1 text-base leading-8 text-slate-600;
+  @apply mt-4 flex-1 text-base leading-7 text-slate-600;
 }
 
 .link {
