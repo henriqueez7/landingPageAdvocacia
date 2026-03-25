@@ -29,9 +29,7 @@
 }
 
 .title {
-  font-family: var(--font-recursive);
-  font-weight: 700;
-  @apply mt-6 text-2xl text-brand-navy;
+  @apply mt-6 font-display text-2xl font-semibold text-brand-navy;
 }
 
 .text {

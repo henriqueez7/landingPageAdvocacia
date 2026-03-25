@@ -33,6 +33,7 @@ function Hero() {
             <p className={styles.overline}>Atendimento juridico premium</p>
 
             <p className={styles.name}>Pedro Henrique</p>
+            <p className={styles.title}>Estrategia juridica com presenca, criterio e confianca.</p>
 
             <div className={styles.actions}>
               <a href="#contato" className={styles.primaryCta}>

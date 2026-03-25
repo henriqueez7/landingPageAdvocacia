@@ -42,8 +42,6 @@
 }
 
 .pillarLabel {
-  font-family: var(--font-recursive);
-  font-weight: 700;
   @apply text-xs uppercase tracking-[0.24em] text-brand-gold/80;
 }
 

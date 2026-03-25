@@ -13,7 +13,9 @@
 }
 
 .title {
-  @apply font-display text-[2rem] leading-[1.06] text-brand-navy sm:text-4xl lg:text-5xl;
+  font-family: var(--font-recursive);
+  font-weight: 500;
+  @apply text-[2rem] leading-[1.06] text-brand-navy sm:text-4xl lg:text-5xl;
 }
 
 .description {
